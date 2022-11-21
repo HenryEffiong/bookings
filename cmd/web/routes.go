@@ -10,8 +10,9 @@ import (
 )
 
 func routes(appConfig *config.AppConfig) http.Handler {
-	http.Handle("/css/", http.StripPrefix("/css/", http.FileServer(http.Dir("css"))))
-	http.Handle("/js/", http.StripPrefix("/js/", http.FileServer(http.Dir("js"))))
+	// http.Handle("/css/", http.StripPrefix("/css/", http.FileServer(http.Dir("css"))))
+	// http.Handle("/js/", http.StripPrefix("/js/", http.FileServer(http.Dir("js"))))
+
 	// mux := pat.New()
 	// mux.Get("/", http.HandlerFunc(handlers.Repo.Home))
 	// mux.Get("/about", http.HandlerFunc(handlers.Repo.About))
@@ -22,5 +23,10 @@ func routes(appConfig *config.AppConfig) http.Handler {
 	mux.Use(SessionLoad)
 	mux.Get("/", handlers.Repo.Home)
 	mux.Get("/about", handlers.Repo.About)
+
+	fileServer := http.FileServer(http.Dir("./static/"))
+	mux.Handle("/static/*", http.StripPrefix("/static/", fileServer))
+	mux.Handle("/css/*", http.StripPrefix("/css/", http.FileServer(http.Dir("./css"))))
+	mux.Handle("/js/*", http.StripPrefix("/js/", http.FileServer(http.Dir("./js"))))
 	return mux
 }

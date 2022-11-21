@@ -87,6 +87,7 @@ address {
     padding: 10px 20px 30px 10px;
 }
 aside > div {
+    top: 50%;
 	margin: 10px auto;
 	background: #AEC6CF;
 	min-height: 100px;
@@ -127,3 +128,10 @@ body > section {
 	}
 
 }
+
+.center {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    padding: 10px;
+  }
