@@ -1,0 +1,23 @@
+mode: set
+github.com/henryeffiong/bookings/internal/render/render.go:19.84,26.2 5 1
+github.com/henryeffiong/bookings/internal/render/render.go:28.56,30.2 1 1
+github.com/henryeffiong/bookings/internal/render/render.go:34.115,36.18 2 1
+github.com/henryeffiong/bookings/internal/render/render.go:36.18,38.3 1 0
+github.com/henryeffiong/bookings/internal/render/render.go:38.8,40.3 1 1
+github.com/henryeffiong/bookings/internal/render/render.go:42.2,43.11 2 1
+github.com/henryeffiong/bookings/internal/render/render.go:43.11,46.3 2 1
+github.com/henryeffiong/bookings/internal/render/render.go:47.2,52.17 5 1
+github.com/henryeffiong/bookings/internal/render/render.go:52.17,55.3 2 0
+github.com/henryeffiong/bookings/internal/render/render.go:62.2,62.12 1 1
+github.com/henryeffiong/bookings/internal/render/render.go:65.67,71.16 3 1
+github.com/henryeffiong/bookings/internal/render/render.go:71.16,73.3 1 0
+github.com/henryeffiong/bookings/internal/render/render.go:75.2,75.29 1 1
+github.com/henryeffiong/bookings/internal/render/render.go:75.29,81.17 3 1
+github.com/henryeffiong/bookings/internal/render/render.go:81.17,83.4 1 0
+github.com/henryeffiong/bookings/internal/render/render.go:85.3,86.18 2 1
+github.com/henryeffiong/bookings/internal/render/render.go:86.18,88.4 1 0
+github.com/henryeffiong/bookings/internal/render/render.go:91.3,91.23 1 1
+github.com/henryeffiong/bookings/internal/render/render.go:91.23,93.18 2 1
+github.com/henryeffiong/bookings/internal/render/render.go:93.18,95.5 1 0
+github.com/henryeffiong/bookings/internal/render/render.go:97.3,97.30 1 1
+github.com/henryeffiong/bookings/internal/render/render.go:102.2,102.21 1 1

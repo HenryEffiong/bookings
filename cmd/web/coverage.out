@@ -1,0 +1,12 @@
+mode: set
+github.com/henryeffiong/bookings/cmd/web/main.go:22.13,25.17 2 0
+github.com/henryeffiong/bookings/cmd/web/main.go:25.17,27.3 1 0
+github.com/henryeffiong/bookings/cmd/web/main.go:29.2,36.17 4 0
+github.com/henryeffiong/bookings/cmd/web/main.go:39.18,52.17 10 1
+github.com/henryeffiong/bookings/cmd/web/main.go:52.17,56.3 3 0
+github.com/henryeffiong/bookings/cmd/web/main.go:58.2,66.12 6 1
+github.com/henryeffiong/bookings/cmd/web/middleware.go:10.53,11.71 1 1
+github.com/henryeffiong/bookings/cmd/web/middleware.go:11.71,14.3 2 0
+github.com/henryeffiong/bookings/cmd/web/middleware.go:17.45,26.2 3 1
+github.com/henryeffiong/bookings/cmd/web/middleware.go:29.50,31.2 1 1
+github.com/henryeffiong/bookings/cmd/web/routes.go:12.49,39.2 18 1

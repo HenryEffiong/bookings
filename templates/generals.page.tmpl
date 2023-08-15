@@ -1,0 +1,73 @@
+{{template "base" .}}
+
+{{define "content"}}
+<div class="container">
+    <div>
+        <img src="/static/images/generals-quarters.png" alt=""
+            class="img-fluid room-image img-thumbnail rounded mx-auto d-block">
+    </div>
+    <div class="row">
+        <div class="col">
+            <h1 class="text-center mt-4">General's Quarters</h1>
+            <p class="text-center">Your home away from home. Set on the hilltops, the view is unforgettable. Come on in!
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col text-center">
+
+            <a id="check-availability-button" href="#!" class="btn btn-success">Check Availability</a>
+        </div>
+    </div>
+
+
+</div>
+
+{{end}}
+
+{{define "js"}}
+<script>
+    document.getElementById("check-availability-button").addEventListener("click", function () {
+        let html = `
+            <form id="reservation-dates-modal" action="" method="POST" novalidate class="needs-validation">
+                <div class="row mb-3" id="reservation-dates">
+                    <div class="col">
+                        <input disabled class="form-control" type="text" name="start" id="start" placeholder="Starting Date" required>
+                    </div>
+                    <div class="col">
+                        <input disabled class="form-control" type="text" name="end" id="end" placeholder="Departure Date" required>
+                    </div>
+                </div>
+            </form>
+`
+
+        attention.custom({
+            msg: html,
+            title: "Choose your dates",
+            willOpen: () => {
+                const elem = document.getElementById("reservation-dates-modal");
+                const rp = new DateRangePicker(elem, {
+                    format: 'yyyy-mm-dd',
+                    showOnFocus: true,
+                })
+            },
+            didOpen: () => {
+                document.getElementById("start").removeAttribute("disabled");
+                document.getElementById("end").removeAttribute("disabled");
+            },
+            callback: function (result) {
+                let form = document.getElementById("reservation-dates-modal")
+                let formData = new FormData(form)
+                // formData.append("csrf_token", "{{.CSRF}}")
+
+                fetch('search-availability-json', {
+                    method: "post",
+                    body: formData
+                })
+                    .then(response => response.json())
+                    .then(data => console.log(data))
+            }
+        })
+    })
+</script>
+{{end}}

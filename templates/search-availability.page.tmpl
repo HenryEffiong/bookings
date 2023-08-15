@@ -1,0 +1,51 @@
+{{template "base" .}}
+
+{{define "content"}}
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col">
+        <h1 class="mt-5">Search for Availability</h1>
+
+        <form action="search-availability" method="POST" class="needs-validation" novalidate>
+            <input type="hidden" name="csrf_token" value="{{.CSRF}}">
+            <div class="row col-md-6">
+                <!-- <div class="col mb-3">
+             <label for="start_date" class="form-label">Start Address</label>
+             <input required type="date" class="form-control"  id="start_date" name="start_date" aria-describedby="startHelp">
+             <div id="startHelp" class="form-text">Enter your starting date</div>
+           </div> -->
+
+                <!-- <div class="col mb-3">
+             <label for="end_date" class="form-label">Ending Address</label>
+             <input required type="date" class="form-control" id="end_date" name="end_date" aria-describedby="endHelp">
+             <div id="endHelp" class="form-text">Enter your starting date</div>
+           </div> -->
+
+                <div class="row mb-3" id="reservation-dates">
+                    <div class="col">
+                        <input class="form-control" type="text" name="start" placeholder="Starting Date" required>
+                    </div>
+                    <div class="col">
+                        <input class="form-control" type="text" name="end" placeholder="Departure Date" required>
+                    </div>
+                </div>
+
+                <hr>
+
+            </div>
+            <button type="submit" class="btn btn-primary">Search Availability</button>
+        </form>
+    </div>
+
+</div>
+
+{{end}}
+
+{{define "js"}}
+<script>
+    const elem = document.getElementById('reservation-dates');
+    const rangepicker = new DateRangePicker(elem, {
+        format: "yyyy-mm-dd",
+    });
+</script>
+{{end}}

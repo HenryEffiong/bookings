@@ -1,0 +1,20 @@
+{
+    "emmet.syntaxProfiles": {},
+    "emmet.triggerExpansionOnTab": true,
+    "emmet.useInlineCompletions": true,
+    "emmet.showSuggestionsAsSnippets": true,
+    "emmet.includeLanguages": {},
+    "emmet.preferences": {},
+    "files.associations": {
+        "*html": "html"
+    },
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "html.format.indentHandlebars": true,
+    "html.format.indentInnerHtml": true,
+    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": false,
+    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": false,
+    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingTemplateStringBraces": true,
+    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": false,
+    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
+}

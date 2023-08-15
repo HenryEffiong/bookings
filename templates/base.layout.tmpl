@@ -1,50 +1,250 @@
 {{define "base"}}
-<!doctype html>
-<html lang="en" class="no-js">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="canonical" href="https://html5-templates.com/" />
-    <title>Bookings and Reservations</title>
-    <meta name="description" content="Simple HTML5 Page layout template with header, footer, sidebar etc.">
-    <link rel="stylesheet" href="/css/style.css">
-    <script src="/js/script.js"></script>
 
-    {{block "css" .}}
-    
-    {{end}}
-</head>
+<!DOCTYPE html>
+<html lang="en">
 
-<body>
-	<header>
-		<div id="logo"><img src="./static/img/golang-img.jpg">Bookings&nbsp;</div>
-		<nav>  
-			 <ul>
-				<li><a href="/">Home</a>
-                <li><a href="/about">About</a>
-			</ul>
-		</nav>
-	</header>
-    <section>
-		<strong>Demonstration of a simple page layout using HTML5 tags: header, nav, section, main, article, aside, footer, address.</strong>
-	</section>
-	{{block "content" .}}
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mi Casa</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.3.3/dist/css/datepicker.min.css"> -->
+        <link rel="stylesheet" type="text/css" href="https://unpkg.com/notie/dist/notie.min.css">
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.3.3/dist/css/datepicker-bs5.min.css">
+        <link rel="stylesheet" type="text/css" href="/static/css/styles.css">
 
-    {{end}}
+    </head>
 
-	<footer>
-		<p>&copy; You can copy, edit and publish this template but please leave a link to our website | <a href="https://html5-templates.com/" target="_blank" rel="nofollow">HTML5 Templates</a></p>
-		<address>
-			Contact: <a href="mailto:me@example.com">Mail me</a>
-		</address>
-	</footer>
+    <body>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark border-bottom border-bottom-dark"
+            data-bs-theme="dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/about">About</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Rooms
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="/generals">General's Quarters</a></li>
+                                <li><a class="dropdown-item" href="/majors">Major's suite</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/search-availability">Book Now</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/contact">Contact</a>
+                        </li>
+                    </ul>
+                    <!-- <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form> -->
+                </div>
+            </div>
+        </nav>
 
-    {{block "js" .}}
+        {{block "content" .}}
 
-    {{end}}
+        {{end}}
 
-</body>
+
+        <div class="row my-footer">
+            <div class="col">
+                Left
+            </div>
+            <div class="col">
+
+            </div>
+            <div class="col">
+
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+            integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.3.3/dist/js/datepicker-full.min.js"></script>
+        <script src="https://unpkg.com/notie"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+                            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+                            crossorigin="anonymous"></script>
+                        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+                            integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+                            crossorigin="anonymous"></script> -->
+        {{block "js" .}}
+
+
+        {{end}}
+
+
+        <script>
+            let attention = Prompt()
+
+            function notify(msg, msgType) {
+                notie.alert({
+                    type: msgType,
+                    text: msg,
+                })
+            }
+
+            function notifyModal(title, text, icon, confirmButtonText) {
+                Swal.fire({
+                    title: title,
+                    html: text,
+                    icon: icon,
+                    confirmButtonText: confirmButtonText
+                })
+            }
+
+            if ("{{.Error}}" !== "") {
+                notify("{{.Error}}", "error")
+            }
+            if ("{{.Warning}}" !== "") {
+                notify("{{.Warning}}", "warning")
+            }
+            if ("{{.FlashMessage}}" !== "") {
+                notify("{{.FlashMessage}}", "error")
+            }
+
+            let warningData = "{{.Warning}}"
+            let errorData = "{{.Error}}"
+
+
+            function Prompt(params) {
+                let toast = function (params) {
+                    const {
+                        msg = "",
+                        icon = "success",
+                        position = "top-end",
+                    } = params
+
+                    const Toast = Swal.mixin({
+                        toast: true,
+                        title: title,
+                        position: position,
+                        icon: icon,
+                        showConfirmButton: false,
+                        timer: 3000,
+                        timerProgressBar: true,
+                        didOpen: (toast) => {
+                            toast.addEventListener('mouseenter', Swal.stopTimer)
+                            toast.addEventListener('mouseleave', Swal.resumeTimer)
+                        }
+                    })
+
+                    Toast.fire({})
+                }
+
+                let success = function (params) {
+                    const {
+                        msg = "",
+                        title = "",
+                        footer = "",
+                    } = params
+
+                    Swal.fire({
+                        icon: 'success',
+                        title: title,
+                        text: msg,
+                        footer: footer
+                    })
+                }
+
+                let error = function (params) {
+                    const {
+                        msg = "",
+                        title = "",
+                        footer = "",
+                    } = params
+
+                    Swal.fire({
+                        icon: 'error',
+                        title: title,
+                        text: msg,
+                        footer: footer
+                    })
+                }
+
+                async function custom(params) {
+                    const {
+                        msg = "",
+                        title = ""
+                    } = params
+
+                    const {value: result} = await Swal.fire({
+                        title: title,
+                        html: msg,
+                        willOpen: () => {
+                            if (params.willOpen !== undefined) {
+                                params.willOpen();
+                            }
+                        },
+                        didOpen: () => {
+                            if (params.didOpen !== undefined) {
+                                params.didOpen();
+                            }
+                        },
+                        backdrop: false,
+                        focusConfirm: false,
+                        showCancelButton: true,
+                        preConfirm: () => {
+                            return [
+                                // document.getElementById('swal-input1').value,
+                                // document.getElementById('swal-input2').value
+                                document.getElementById('start').value,
+                                document.getElementById('end').value
+                            ]
+                        }
+                    })
+
+                    if (result) {
+                        if (result.dismiss !== Swal.DismissReason.cancel) {
+                            if (result.value !== "") {
+                                if (params.callback !== undefined) {
+                                    params.callback(result)
+                                }
+                            } else {
+                                params.callback(false)
+                            }
+                        } else {
+                            params.callback(false)
+                        }
+                    }
+                }
+
+
+                return {
+                    toast: toast,
+                    success: success,
+                    error: error,
+                    custom: custom,
+                }
+            }
+
+        </script>
+    </body>
 
 </html>
+
 {{end}}
